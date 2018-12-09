@@ -2,5 +2,5 @@
 
 void var(int *ptx)
 {
-	
+	int a;
 }
