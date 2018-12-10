@@ -74,5 +74,35 @@
     <ClCompile Include="var.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
+    <ClCompile Include="write_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="compound_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="expression_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="expression.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="simple_expr.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="constdeclarationlist.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="constdeclarationstat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="vardeclarationstat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="vardeclarationlist.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="statementlist.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

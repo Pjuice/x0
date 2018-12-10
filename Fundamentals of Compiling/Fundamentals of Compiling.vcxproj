@@ -152,8 +152,13 @@
     <ClInclude Include="head.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="compound_stat.c" />
+    <ClCompile Include="constdeclarationlist.c" />
+    <ClCompile Include="constdeclarationstat.c" />
     <ClCompile Include="declaration_list.c" />
     <ClCompile Include="enter.c" />
+    <ClCompile Include="expression.c" />
+    <ClCompile Include="expression_stat.c" />
     <ClCompile Include="if_stat.c" />
     <ClCompile Include="init.c" />
     <ClCompile Include="declaration.c" />
@@ -162,10 +167,15 @@
     <ClCompile Include="error.c" />
     <ClCompile Include="position.c" />
     <ClCompile Include="read_stat.c" />
+    <ClCompile Include="simple_expr.c" />
     <ClCompile Include="statement.c" />
+    <ClCompile Include="statementlist.c" />
     <ClCompile Include="statement_list.c" />
     <ClCompile Include="var.c" />
+    <ClCompile Include="vardeclarationlist.c" />
+    <ClCompile Include="vardeclarationstat.c" />
     <ClCompile Include="while_stat.c" />
+    <ClCompile Include="write_stat.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

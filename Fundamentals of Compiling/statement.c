@@ -23,7 +23,7 @@ void statement(int* ptx)
 		compound_stat(ptx);
 	}
 	else if (sym == semicolon || sym == sharpsym || sym == minus
-		|| sym == ident || sym == number)
+		|| sym == ident || sym == number || sym == lparen)
 	{
 		expression_stat(ptx);
 	}

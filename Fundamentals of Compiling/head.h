@@ -7,7 +7,7 @@
 #define true 1
 #define false 0
 
-#define norw 8
+#define norw 13
 #define txmax 100
 #define al 10
 #define nmax 14
@@ -21,7 +21,8 @@ enum symbol
 	mainsym, endsym, ifsym, thensym, whilesym,
 	writesym, readsym, dosym, callsym, constsym,
 	varsym, procsym, lbrace, rbrace, lmbrace, 
-	rmbrace, charsym, elsesym, intsym,sharpsym
+	rmbrace, charsym, elsesym, intsym,sharpsym,andsym,orsym,
+	doublesym, boolsym, truesym, falsesym
 };
 
 enum object
@@ -69,5 +70,17 @@ void if_stat(int *ptx);
 void while_stat(int *ptx);
 void read_stat(int *ptx);
 void var(int *ptx);
+void write_stat(int *ptx);
+void compound_stat(int *ptx);
+void expression_stat(int *ptx);
+void expression(int *ptx);
+void simple_expr(int *ptx);
+void constdeclarationlist();
+void constdeclarationstat();
+void vardeclarationstat();
+void vardeclarationlist();
+
+
+
 
 

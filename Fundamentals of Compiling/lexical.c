@@ -157,8 +157,39 @@ void getsym()
 						}
 						else
 						{
-							sym = ssym[ch];
-							getch();
+							if (ch == '&')
+							{
+								getch();
+								if (ch == '&')
+								{
+									sym == andsym;
+									getch();
+								}
+								else
+								{
+									sym = nul;
+								}
+							}
+							else 
+							{
+								if (ch == '|')
+								{
+									getch();
+									if (ch == '|')
+									{
+										sym == orsym;
+									}
+									else
+									{
+										sym == nul;
+									}
+								}
+								else
+								{
+									sym = ssym[ch];
+									getch();
+								}
+							}
 						}
 					}
 				}

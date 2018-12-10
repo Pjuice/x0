@@ -34,17 +34,43 @@ int main()
 
 	if (sym != mainsym)
 	{
-		error(9);
+		error(9);	//»±…Ÿmain∑˚∫≈
+	}
+
+	getsym();
+
+	if (sym != lparen)
+	{
+		error(9);	//»±…Ÿ◊Û–°¿®∫≈'('
+	}
+
+	getsym();
+
+	if (sym != rparen)
+	{
+		error(9);	//»±…Ÿ”“–°¿®∫≈')'
 	}
 
 	getsym();
 
 	if (sym != lbrace)
 	{
-		error(9);
+		error(9);	//»±…Ÿ◊Û¥Û¿®∫≈'{'
 	}
+
+	getsym();
+
+	constdeclarationlist();
+
+	vardeclaration();
+
+	statementlist();
 	
 	getsym();
-	declaration_list(0);
+
+	if (sym != rbrace)
+	{
+		error(9);	//»±…Ÿ”“¥Û¿®∫≈
+	}
 
 }
