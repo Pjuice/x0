@@ -1,14 +1,22 @@
 #include "head.h"
 
-void compound_stat(int *ptx)
+void compound_stat()
 {
-	getsym();
 	if (sym == lbrace)
 	{
-		statement_list(ptx);
-		if (sym != rbrace)
+		getsym();
+		statement_list();
+		if (sym == rbrace)
 		{
-			error(22);	//»±…Ÿ”“¥Û¿®∫≈
+			getsym();
 		}
+		else
+		{
+			error(13);	//»±…Ÿ”“¥Û¿®∫≈
+		}
+	}
+	else
+	{
+		error(14);	//»±…Ÿ◊Û¥Û¿®∫≈
 	}
 }

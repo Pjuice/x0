@@ -1,27 +1,18 @@
 #include "head.h"
 
-void expression(int *ptx)
+void expression()
 {
-	getsym();
-	if(sym == sharpsym)
+	if (sym == ident)
 	{
-		var(ptx);
-		getsym();
-		if (sym == becomes)
-		{
-			expression(ptx);
-		}
-		else
-		{
-			error(22);	//缺少赋值号
-		}
+		simple_var();
 	}
-	else if (sym == minus || sym == lparen || sym == ident || sym == number)
+	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+		|| sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)
 	{
-		simple_expr(ptx);
+		value_expr();
 	}
 	else
 	{
-		error(23);	//未找到有效的符号
+		error(14);	//未找到有效符
 	}
 }

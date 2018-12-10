@@ -1,30 +1,58 @@
 #include "head.h"
 
-void statement(int* ptx)
+void statement()
 {
 	if (sym == ifsym)
 	{
-		if_stat(ptx);
+		if_stat();
 	}
 	else if (sym == whilesym)
 	{
-		while_stat(ptx);
+		while_stat();
 	}
 	else if (sym == readsym)
 	{
-		read_stat(ptx);
+		read_stat();
 	}
 	else if (sym == writesym)
 	{
-		write_stat(ptx);
+		write_stat();
 	}
 	else if (sym == lbrace)
 	{
-		compound_stat(ptx);
+		compound_stat();
 	}
-	else if (sym == semicolon || sym == sharpsym || sym == minus
-		|| sym == ident || sym == number || sym == lparen)
+	else if (sym == semicolon || sym == oddsym || sym == minus || sym == not || sym == lparen || sym == ident
+		|| sym == incre || sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)
 	{
-		expression_stat(ptx);
+		expression_stat();
+	}
+	else if (sym == forsym)
+	{
+		for_stat();
+	}
+	else if (sym == switchsym)
+	{
+		switch_stat();
+	}
+	else if (sym == exitsym)
+	{
+		exit_stat();
+	}
+	else if (sym == continuesym)
+	{
+		continue_stat();
+	}
+	else if (sym == dosym)
+	{
+		do_stat();
+	}
+	else if (sym == repeatsym)
+	{
+		repeat_stat();
+	}
+	else if (sym == returnsym)
+	{
+		return_stat();
 	}
 }

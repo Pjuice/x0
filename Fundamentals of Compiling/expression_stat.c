@@ -1,18 +1,18 @@
 #include "head.h"
 
-void expression_stat(int *ptx)
+void expression_stat()
 {
-	getsym();
 	if (sym == semicolon)
 	{
-		
+		getsym();
+	}
+	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == ident
+		|| sym == incre || sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)
+	{
+		expression();
 	}
 	else
 	{
-		expression(ptx);
-		if (sym != semicolon)
-		{
-			error(21);	//缺少结束分号
-		}
+		error(14);	//缺少有效标识符
 	}
 }

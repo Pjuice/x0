@@ -73,4 +73,7 @@ int main()
 		error(9);	//»±…Ÿ”“¥Û¿®∫≈
 	}
 
+	printf("\n===Parsing success!===\n");
+	fprintf(foutput, "\n===Parsing success!===\n");
+
 }

@@ -168,9 +168,11 @@
     <ClCompile Include="position.c" />
     <ClCompile Include="read_stat.c" />
     <ClCompile Include="simple_expr.c" />
+    <ClCompile Include="simple_value.c" />
+    <ClCompile Include="simple_var.c" />
     <ClCompile Include="statement.c" />
-    <ClCompile Include="statementlist.c" />
     <ClCompile Include="statement_list.c" />
+    <ClCompile Include="value_expr.c" />
     <ClCompile Include="var.c" />
     <ClCompile Include="vardeclarationlist.c" />
     <ClCompile Include="vardeclarationstat.c" />

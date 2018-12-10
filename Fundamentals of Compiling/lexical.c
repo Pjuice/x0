@@ -107,7 +107,7 @@ void getsym()
 				}
 				else
 				{
-					sym = nul;
+					sym = becomes;
 				}
 			}
 			else
@@ -122,7 +122,7 @@ void getsym()
 					}
 					else
 					{
-						sym = nul;
+						sym = not;
 					}
 				}
 				else
@@ -162,7 +162,7 @@ void getsym()
 								getch();
 								if (ch == '&')
 								{
-									sym == andsym;
+									sym = andsym;
 									getch();
 								}
 								else
@@ -177,17 +177,50 @@ void getsym()
 									getch();
 									if (ch == '|')
 									{
-										sym == orsym;
+										sym = orsym;
+										getch();
 									}
 									else
 									{
-										sym == nul;
+										sym = nul;
 									}
 								}
 								else
 								{
-									sym = ssym[ch];
-									getch();
+									if (ch == '+')
+									{
+										getch();
+										if (ch == '+')
+										{
+											sym = incre;
+											getch();
+										}
+										else
+										{
+											sym = plus;
+										}
+									}
+									else
+									{
+										if (ch == '-')
+										{
+											getch();
+											if (ch == '-')
+											{
+												sym = decre;
+												getch();
+											}
+											else
+											{
+												sym = minus;
+											}
+										}
+										else
+										{
+											sym = ssym[ch];
+											getch();
+										}
+									}
 								}
 							}
 						}
