@@ -5,6 +5,15 @@ void expression()
 	if (sym == ident)
 	{
 		simple_var();
+		if (sym == becomes)
+		{
+			geysym();
+			expression();
+		}
+		else
+		{
+			error(16);	//»±…Ÿ∏≥÷µ∫≈
+		}
 	}
 	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
 		|| sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)

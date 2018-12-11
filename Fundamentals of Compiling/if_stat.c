@@ -1,21 +1,17 @@
 #include "head.h"
 
-void if_stat(int* ptx)
+void if_stat()
 {
 	getsym();
 	if (sym == lparen)
 	{
-		expression(ptx);
+		expression();
 		if (sym == rparen)
 		{
-			statement(ptx);
+			statement();
 			if (sym == elsesym)
 			{
-				statement(ptx);
-			}
-			else
-			{
-				//没有else条件，直接跳过
+				statement();
 			}
 		}
 		else

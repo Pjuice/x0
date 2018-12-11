@@ -1,8 +1,7 @@
 #include "head.h"
 
-void vardeclarationstat()
+void vardeclaration_stat()
 {
-	geysym();
 	if (sym == intsym || sym == charsym || sym == doublesym || sym == boolsym)
 	{
 		getsym();

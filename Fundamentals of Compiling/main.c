@@ -60,11 +60,11 @@ int main()
 
 	getsym();
 
-	constdeclarationlist();
+	constdeclaration_list();
 
-	vardeclaration();
+	vardeclaration_list();
 
-	statementlist();
+	statement_list();
 	
 	getsym();
 

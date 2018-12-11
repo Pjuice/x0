@@ -1,14 +1,15 @@
 #include "head.h"
 
-void while_stat(int *ptx)
+void while_stat()
 {
 	getsym();
 	if (sym == lparen)
 	{
-		expression(ptx);
+		expression();
 		if (sym == rparen)
 		{
-			statement(ptx);
+			getsym();
+			statement();
 		}
 		else
 		{

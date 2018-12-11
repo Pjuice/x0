@@ -6,7 +6,7 @@ void statement_list()
 		sym == oddsym || sym == readsym || sym == minus || sym == not || sym == lparen || sym == ident
 		|| sym == incre || sym == decre || sym == number || sym == truesym || sym == falsesym
 		|| sym == forsym || sym == switchsym || sym == exitsym || sym == continuesym || sym == dosym ||
-		sym == repeatsym || sym == returnsym)
+		sym == repeatsym || sym == returnsym || sym == breaksym)
 	{
 		statement();
 		statement_list();

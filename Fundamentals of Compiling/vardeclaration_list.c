@@ -1,10 +1,10 @@
 #include "head.h"
 
-void vardeclarationlist()
+void vardeclaration_list()
 {
 	if (sym == intsym || sym == charsym || sym == boolsym || sym == doublesym)
 	{
-		vardeclarationstar();
-		vardeclarationlist();
+		vardeclaration_stat();
+		vardeclaration_list();
 	}
 }

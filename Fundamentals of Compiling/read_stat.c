@@ -1,15 +1,23 @@
 #include "head.h"
 
-void read_stat(int *ptx)
+void read_stat()
 {
-	getsym();
-	var(ptx);
-	if (sym == semicolon)
+	if (sym == readsym)
 	{
-		
+		getsym();
+		variable();
+		getsym();
+		if (sym == semicolon)
+		{
+			getsym();
+		}
+		else
+		{
+			error(10);	//缺少分号
+		}
 	}
 	else
 	{
-		error(17); //缺少分号
+		error(11);	//缺少read符号
 	}
 }

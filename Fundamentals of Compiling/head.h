@@ -7,23 +7,23 @@
 #define true 1
 #define false 0
 
-#define norw 21
+#define norw 25
 #define txmax 100
 #define al 10
 #define nmax 14
 
 enum symbol
 {
-	nul, ident, number, plus, minus,
+	nul, ident, number, plus, minus,untilsym,
 	times, slash, oddsym, eql, neq,
-	lss, leq, gtr, geq, lparen,
+	lss, leq, gtr, geq, lparen, colon,breaksym,
 	rparen, comma, semicolon, period, becomes, 
 	mainsym, endsym, ifsym, thensym, whilesym,
 	writesym, readsym, dosym, callsym, constsym,
-	varsym, procsym, lbrace, rbrace, lmbrace, 
+	varsym, procsym, lbrace, rbrace, lmbrace, casesym,
 	rmbrace, charsym, elsesym, intsym,sharpsym,andsym,orsym,
-	doublesym, boolsym, truesym, falsesym, switchsym, forsym,
-	repeatsym, returnsym, exitsym, continuesym, not, incre, decre,xor
+	doublesym, boolsym, truesym, falsesym, switchsym, forsym,defaultsym,
+	repeatsym, returnsym, exitsym, continuesym, not, incre, decre,xor,modsym
 };
 
 enum object

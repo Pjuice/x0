@@ -35,6 +35,10 @@ void statement()
 	{
 		switch_stat();
 	}
+	else if (sym == breaksym)
+	{
+		break_stat();
+	}
 	else if (sym == exitsym)
 	{
 		exit_stat();
@@ -45,7 +49,7 @@ void statement()
 	}
 	else if (sym == dosym)
 	{
-		do_stat();
+		dowhile_stat();
 	}
 	else if (sym == repeatsym)
 	{

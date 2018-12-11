@@ -1,11 +1,22 @@
 #include "head.h"
 
-void write_stat(int *ptx)
+void write_stat()
 {
-	getsym();
-	expression(ptx);
-	if (sym != semicolon)
+	if (sym == writesym)
 	{
-		error(21);	//结束缺少分号
+		getsym();
+		expression();
+		if (sym == semicolon)
+		{
+			getsym();
+		}
+		else
+		{
+			error(12);	//缺少结束符分号
+		}
+	}
+	else
+	{
+		error(13);	//缺少write符号
 	}
 }
