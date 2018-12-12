@@ -23,7 +23,7 @@ void statement()
 		compound_stat();
 	}
 	else if (sym == semicolon || sym == oddsym || sym == minus || sym == not || sym == lparen || sym == ident
-		|| sym == incre || sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)
+		|| sym == incre || sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym)
 	{
 		expression_stat();
 	}
@@ -58,5 +58,9 @@ void statement()
 	else if (sym == returnsym)
 	{
 		return_stat();
+	}
+	else
+	{
+		error(20);	//缺少有效标识符
 	}
 }

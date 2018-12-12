@@ -11,7 +11,7 @@ void simple_var()
 			expression();
 			if (sym == rmbrace)
 			{
-				geysym();
+				getsym();
 			}
 			else
 			{

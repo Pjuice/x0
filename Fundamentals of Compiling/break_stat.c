@@ -2,7 +2,7 @@
 
 void break_stat()
 {
-	if (sym == break_stat)
+	if (sym == breaksym)
 	{
 		getsym();
 		if (sym == semicolon)

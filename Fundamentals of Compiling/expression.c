@@ -7,7 +7,7 @@ void expression()
 		simple_var();
 		if (sym == becomes)
 		{
-			geysym();
+			getsym();
 			expression();
 		}
 		else
@@ -16,7 +16,7 @@ void expression()
 		}
 	}
 	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
-		|| sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)
+		|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym)
 	{
 		value_expr();
 	}

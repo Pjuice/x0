@@ -8,9 +8,8 @@ void simple_value()
 		addict_expr();
 	}
 	else if (sym == minus || sym == not || sym == lparen || sym == incre || sym == decre || sym == ident
-		|| sym == truesym || sym == falsesym || sym == number)
+		|| sym == truesym || sym == falsesym || sym == intnum || sym == doublenum)
 	{
-		getsym();
 		addict_expr();
 		if (sym == gtr || sym == lss || sym == geq || sym == leq || sym == eql || sym == neq)
 		{

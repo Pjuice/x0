@@ -2,10 +2,9 @@
 
 void term()
 {
-	if (sym == not || sym == lparen || sym == incre || sym == decre || sym == ident || sym == number
+	if (sym == not || sym == lparen || sym == incre || sym == decre || sym == ident || sym == intnum || sym == doublenum
 		|| sym == truesym || sym == falsesym)
 	{
-		getsym();
 		factor();
 		while (sym == times || sym == slash || sym == modsym)
 		{

@@ -6,7 +6,6 @@ void read_stat()
 	{
 		getsym();
 		variable();
-		getsym();
 		if (sym == semicolon)
 		{
 			getsym();

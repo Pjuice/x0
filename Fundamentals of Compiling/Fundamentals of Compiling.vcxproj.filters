@@ -21,12 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="head.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -44,22 +38,13 @@
     <ClCompile Include="error.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
-    <ClCompile Include="declaration_list.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
     <ClCompile Include="enter.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="declaration.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
     <ClCompile Include="position.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
     <ClCompile Include="statement.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="var.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
     <ClCompile Include="compound_stat.c">
@@ -69,21 +54,6 @@
       <Filter>源文件\gramma</Filter>
     </ClCompile>
     <ClCompile Include="expression.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="simple_expr.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="constdeclarationlist.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="constdeclarationstat.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="vardeclarationstat.c">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
-    <ClCompile Include="vardeclarationlist.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
     <ClCompile Include="write_stat.c">
@@ -109,6 +79,57 @@
     </ClCompile>
     <ClCompile Include="simple_value.c">
       <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="addict_expr.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="break_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="continue_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="dowhile_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="exit_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="factor.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="for_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="repeat_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="switch_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="term.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="vardeclaration_list.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="vardeclaration_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="return_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="variable.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="constdeclaration_stat.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="constdeclaration_list.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="head.c">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ void addict_expr()
 			term();
 		}
 	}
-	if (sym == not || sym == lparen || sym == incre || sym == decre || sym == ident || sym == number
+	if (sym == not || sym == lparen || sym == incre || sym == decre || sym == ident || sym == intnum || sym == doublenum
 		|| sym == truesym || sym == falsesym)
 	{
 		term();

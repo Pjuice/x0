@@ -18,7 +18,7 @@ void repeat_stat()
 					if (sym == lparen)
 					{
 						getsym();
-						expression;
+						expression();
 						if (sym == rparen)
 						{
 							getsym();

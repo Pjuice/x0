@@ -1,6 +1,6 @@
 #include "head.h"
 
-void constdeclarationstat()
+void constdeclaration_stat()
 {
 	if (sym == constsym)
 	{
@@ -14,7 +14,7 @@ void constdeclarationstat()
 				if (sym == becomes)
 				{
 					getsym();
-					if (sym == number || sym == truesym || sym == falsesym)
+					if (sym == intnum || sym == truesym || sym == falsesym || sym == doublenum)
 					{
 						getsym();
 						if (sym == semicolon)

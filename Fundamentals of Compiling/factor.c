@@ -24,7 +24,7 @@ void factor()
 		getsym();
 		variable();
 	}
-	else if (sym == number || sym == truesym || sym == falsesym)
+	else if (sym == intnum || sym == truesym || sym == falsesym || sym == doublenum)
 	{
 		getsym();
 	}

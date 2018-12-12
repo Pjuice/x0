@@ -84,11 +84,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -147,18 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
     <ClInclude Include="head.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="addict_expr.c" />
     <ClCompile Include="break_stat.c" />
     <ClCompile Include="compound_stat.c" />
-    <ClCompile Include="constdeclarationlist.c" />
-    <ClCompile Include="constdeclarationstat.c" />
+    <ClCompile Include="constdeclaration_list.c" />
+    <ClCompile Include="constdeclaration_stat.c" />
     <ClCompile Include="continue_stat.c" />
-    <ClCompile Include="declaration_list.c" />
     <ClCompile Include="dowhile_stat.c" />
     <ClCompile Include="enter.c" />
     <ClCompile Include="exit_stat.c" />
@@ -166,16 +163,16 @@
     <ClCompile Include="expression_stat.c" />
     <ClCompile Include="factor.c" />
     <ClCompile Include="for_stat.c" />
+    <ClCompile Include="head.c" />
     <ClCompile Include="if_stat.c" />
     <ClCompile Include="init.c" />
-    <ClCompile Include="declaration.c" />
     <ClCompile Include="lexical.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="error.c" />
     <ClCompile Include="position.c" />
     <ClCompile Include="read_stat.c" />
     <ClCompile Include="repeat_stat.c" />
-    <ClCompile Include="simple_expr.c" />
+    <ClCompile Include="return_stat.c" />
     <ClCompile Include="simple_value.c" />
     <ClCompile Include="simple_var.c" />
     <ClCompile Include="statement.c" />
@@ -183,9 +180,9 @@
     <ClCompile Include="switch_stat.c" />
     <ClCompile Include="term.c" />
     <ClCompile Include="value_expr.c" />
-    <ClCompile Include="var.c" />
     <ClCompile Include="vardeclaration_list.c" />
     <ClCompile Include="vardeclaration_stat.c" />
+    <ClCompile Include="variable.c" />
     <ClCompile Include="while_stat.c" />
     <ClCompile Include="write_stat.c" />
   </ItemGroup>

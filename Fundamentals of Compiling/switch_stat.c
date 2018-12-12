@@ -20,7 +20,7 @@ void switch_stat()
 						while (sym == casesym)
 						{
 							getsym();
-							if (sym == number)
+							if (sym == intnum)
 							{
 								getsym();
 								if (sym == colon)
@@ -45,16 +45,16 @@ void switch_stat()
 						if (sym == colon)
 						{
 							getsym();
-							statement_list;
-							if (sym == rbrace)
-							{
-								getsym();
-							}
+							statement_list();
 						}
 					}
-					else if (sym == rbrace)
+					if (sym == rbrace)
 					{
 						getsym();
+					}
+					else
+					{
+						error(20);	//»±…Ÿ”“¥Û¿®∫≈
 					}
 				}
 			}

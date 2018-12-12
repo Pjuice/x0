@@ -15,7 +15,7 @@ void getch()
 		ch = ' ';
 		while (ch != 10)
 		{
-			if (EOF == fscanf(fin, "&c", &ch))
+			if (EOF == fscanf(fin, "%c", &ch))
 			{
 				line[ll] = 0;
 				break;
@@ -78,21 +78,54 @@ void getsym()
 	}
 	else
 	{
-		if (ch >= '0' && ch <= '9')/*当前的单词是数字*/
+		if (ch >= '0' && ch <= '9')	/* 读取数字 */
 		{
 			k = 0;
-			num = 0;
-			sym = number;
+			intNum = 0;
+			int flagDecPoint = 0; 
+			double decimal = 0;   
+			double weight = 0.1;  
+
 			do
 			{
-				num = 10 * num + ch - '0';
-				k++;
+				if (!flagDecPoint)
+				{
+					intNum = 10 * intNum + ch - '0';
+					k++;
+
+					if (k > nmax) /* 数字超过了规定大小 */
+					{
+						error(20);	
+					}
+				}
+				else
+				{
+					decimal += weight * (ch - '0');
+					weight *= 0.1;
+				}
 				getch();
+				if (ch == '.' && !flagDecPoint)
+				{
+					getch();
+					flagDecPoint = 1;
+					if (ch < '0' || ch > '9') /* illegal number */
+					{
+						error(21);
+					}
+				}
 			} while (ch >= '0' && ch <= '9');
-			k--;
-			if (k > nmax)
+
+			if (flagDecPoint) /* current sym is floatnumber */
 			{
-				error(30);
+				doublenumber = intNum + decimal;
+			}
+			if (flagDecPoint)
+			{
+				sym = doublenum;
+			}
+			else
+			{
+				sym = intnum;
 			}
 		}
 		else
@@ -218,7 +251,10 @@ void getsym()
 										else
 										{
 											sym = ssym[ch];
-											getch();
+											if (sym != rbrace)
+											{
+												getch();
+											}
 										}
 									}
 								}

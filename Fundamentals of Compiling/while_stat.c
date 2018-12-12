@@ -2,22 +2,30 @@
 
 void while_stat()
 {
-	getsym();
-	if (sym == lparen)
+	if (sym == whilesym)
 	{
-		expression();
-		if (sym == rparen)
+		getsym();
+		if (sym == lparen)
 		{
 			getsym();
-			statement();
+			expression();
+			if (sym == rparen)
+			{
+				getsym();
+				statement();
+			}
+			else
+			{
+				error(21);	//缺少右小括号
+			}
 		}
 		else
 		{
-			error(17);	//缺少右括号
+			error(22);	//缺少左小括号
 		}
 	}
 	else
 	{
-		error(18);	//缺少左括号
+		error(23);	//缺少while标识符
 	}
 }

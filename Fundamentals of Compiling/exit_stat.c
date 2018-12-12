@@ -8,7 +8,7 @@ void exit_stat()
 		if (sym == lparen)
 		{
 			getsym();
-			if (sym == number)
+			if (sym == intnum)
 			{
 				getsym();
 				if (sym == rparen)

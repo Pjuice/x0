@@ -13,7 +13,7 @@ void vardeclaration_stat()
 				while (sym == lmbrace)
 				{
 					getsym();
-					if (sym == number)
+					if (sym == intnum)
 					{
 						getsym();
 						if (sym == rmbrace)
@@ -31,7 +31,7 @@ void vardeclaration_stat()
 					}
 				}
 			}
-			else if (sym == semicolon)
+			if (sym == semicolon)
 			{
 				getsym();
 			}

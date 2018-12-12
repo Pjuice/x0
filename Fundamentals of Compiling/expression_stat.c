@@ -7,7 +7,7 @@ void expression_stat()
 		getsym();
 	}
 	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == ident
-		|| sym == incre || sym == decre || sym == intsym || sym == doublesym || sym == truesym || sym == falsesym)
+		|| sym == incre || sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym)
 	{
 		expression();
 	}

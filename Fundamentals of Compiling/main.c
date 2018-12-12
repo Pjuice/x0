@@ -66,7 +66,6 @@ int main()
 
 	statement_list();
 	
-	getsym();
 
 	if (sym != rbrace)
 	{
@@ -76,4 +75,6 @@ int main()
 	printf("\n===Parsing success!===\n");
 	fprintf(foutput, "\n===Parsing success!===\n");
 
+	fclose(foutput);
+	fclose(fin);
 }

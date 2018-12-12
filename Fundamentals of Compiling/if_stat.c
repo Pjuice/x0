@@ -5,12 +5,15 @@ void if_stat()
 	getsym();
 	if (sym == lparen)
 	{
+		getsym();
 		expression();
 		if (sym == rparen)
 		{
+			getsym();
 			statement();
 			if (sym == elsesym)
 			{
+				getsym();
 				statement();
 			}
 		}
