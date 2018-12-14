@@ -2,10 +2,18 @@
 
 void value_expr()
 {
-	simple_value();
-	while (sym == andsym || sym == orsym || sym == xor)
+	if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+		|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
 	{
-		getsym();
 		simple_value();
+		while (sym == andsym || sym == orsym || sym == xor)
+		{
+			getsym();
+			simple_value();
+		}
+	}
+	else
+	{
+		error(20);	//缺少有效标识符
 	}
 }

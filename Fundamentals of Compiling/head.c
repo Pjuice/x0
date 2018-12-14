@@ -11,3 +11,6 @@ char a[al + 1];
 char word[norw][al];	/* 保留字，13个保留字，每个最长为10 */
 enum symbol wsym[norw];	/* 保留字对应的符号值 */
 enum symbol ssym[256];	/* 单字符的符号值 */
+int backupnum = 0;
+struct backup backupsave[maxbackup];
+

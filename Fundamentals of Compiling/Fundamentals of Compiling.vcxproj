@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="addict_expr.c" />
+    <ClCompile Include="backup.c" />
     <ClCompile Include="break_stat.c" />
     <ClCompile Include="compound_stat.c" />
     <ClCompile Include="constdeclaration_list.c" />
@@ -173,6 +174,7 @@
     <ClCompile Include="read_stat.c" />
     <ClCompile Include="repeat_stat.c" />
     <ClCompile Include="return_stat.c" />
+    <ClCompile Include="rollback.c" />
     <ClCompile Include="simple_value.c" />
     <ClCompile Include="simple_var.c" />
     <ClCompile Include="statement.c" />

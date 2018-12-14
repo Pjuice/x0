@@ -21,7 +21,6 @@ void factor()
 	}
 	else if (sym == incre || sym == decre || sym == ident)
 	{
-		getsym();
 		variable();
 	}
 	else if (sym == intnum || sym == truesym || sym == falsesym || sym == doublenum)

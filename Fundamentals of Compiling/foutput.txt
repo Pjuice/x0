@@ -1,2 +1,13 @@
-main(){}
+main()
+{
+	int x;
+	int y;
+	int m[3];
+	read x;
+	read y;
+	if(x > y) 
+	{
+		m[0] = x - y;
+	}
+
 ===Parsing success!===

@@ -131,5 +131,11 @@
     <ClCompile Include="head.c">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="rollback.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
+    <ClCompile Include="backup.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

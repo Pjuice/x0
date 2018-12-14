@@ -4,6 +4,7 @@ void expression()
 {
 	if (sym == ident)
 	{
+		backup();
 		simple_var();
 		if (sym == becomes)
 		{
@@ -12,7 +13,8 @@ void expression()
 		}
 		else
 		{
-			error(16);	//»±…Ÿ∏≥÷µ∫≈
+			rollback();
+			value_expr();	
 		}
 	}
 	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre

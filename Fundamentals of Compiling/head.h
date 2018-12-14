@@ -11,6 +11,8 @@
 #define txmax 100
 #define al 10
 #define nmax 14
+#define maxbackup 100
+
 
 enum symbol
 {
@@ -45,11 +47,25 @@ extern char a[al + 1];
 extern char word[norw][al];	/* 保留字，13个保留字，每个最长为10 */
 extern enum symbol wsym[norw];	/* 保留字对应的符号值 */
 extern enum symbol ssym[256];	/* 单字符的符号值 */
- 
+extern int backupnum;
+extern struct backup backupsave[maxbackup];
+
 struct tablestruct
 {
 	char name[al];
 	enum object kind;
+};
+
+ struct backup
+{
+	FILE* backupfin;
+	char backupch;
+	enum symbol backupsym;
+	int backupcc;
+	int backupll;
+	char backupline[81];
+	char backupid[al + 1];
+
 };
 
 struct tablestruct table[txmax];
@@ -94,5 +110,7 @@ void value_expr();
 void vardeclaration_list();
 void vardeclaration_stat();
 void variable();
+void backup();
+void rollback();
 
 
