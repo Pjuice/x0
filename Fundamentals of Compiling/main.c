@@ -72,6 +72,13 @@ int main()
 		error(9);	//缺少右大括号
 	}
 
+	getsym();
+
+	if (sym != oversym)
+	{
+		error(10);	//缺少程序结束符
+	}
+
 	printf("\n===Parsing success!===\n");
 	fprintf(foutput, "\n===Parsing success!===\n");
 

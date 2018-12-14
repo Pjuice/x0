@@ -251,7 +251,7 @@ void getsym()
 										else
 										{
 											sym = ssym[ch];
-											if (sym != rbrace)
+											if (sym != oversym)
 											{
 												getch();
 											}

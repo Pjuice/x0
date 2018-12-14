@@ -25,7 +25,7 @@ enum symbol
 	varsym, procsym, lbrace, rbrace, lmbrace, casesym,
 	rmbrace, charsym, elsesym, intnum,sharpsym,andsym,orsym, intsym,
 	doublesym, boolsym, truesym, falsesym, switchsym, forsym, defaultsym, doublenum,
-	repeatsym, returnsym, exitsym, continuesym, not, incre, decre,xor,modsym
+	repeatsym, returnsym, exitsym, continuesym, not, incre, decre,xor,modsym, oversym
 };
 
 enum object
