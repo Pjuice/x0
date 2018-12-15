@@ -37,6 +37,12 @@ int main()
 		error(9);	//È±ÉÙmain·ûºÅ
 	}
 
+	fctnum++;
+	strcpy(fctinfo[fctnum-1].name, id);
+	//fctinfo[fctnum].startINTCode = codeNum;
+	fctinfo[fctnum].paranum = 0;
+	fctinfo[fctnum].returntype = retvoid;
+
 	getsym();
 
 	if (sym != lparen)
@@ -60,9 +66,11 @@ int main()
 
 	getsym();
 
-	constdeclaration_list();
+	int offset = 3;
 
-	vardeclaration_list();
+	constdeclaration_list(&offset);
+
+	vardeclaration_list(&offset);
 
 	statement_list();
 	

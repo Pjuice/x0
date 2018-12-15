@@ -19,9 +19,11 @@ void factor()
 			error(16);	//»±…Ÿ”“–°¿®∫≈
 		}
 	}
-	else if (sym == incre || sym == decre || sym == ident)
+	else if (sym == incre || sym == decre || (sym == ident && positionbyidentname(id, fctnum - 1) != -1))
 	{
-		variable();
+		int offset;
+		enum object kind;
+		variable(&kind, &offset);
 	}
 	else if (sym == intnum || sym == truesym || sym == falsesym || sym == doublenum)
 	{
