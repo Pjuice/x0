@@ -8,15 +8,27 @@ void for_stat()
 		if (sym == lparen)
 		{
 			getsym();
-			expression();
+			if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+				|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
+			{
+				expression();
+			}
 			if (sym == semicolon)
 			{
 				getsym();
-				expression();
+				if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+					|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
+				{
+					expression();
+				}
 				if (sym == semicolon)
 				{
 					getsym();
-					expression();
+					if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+						|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
+					{
+						expression();
+					}
 					if (sym == rparen)
 					{
 						getsym();

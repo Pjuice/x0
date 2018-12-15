@@ -1,35 +1,23 @@
 main()
 {
 	int i;
-	int ans;
-	ans = 0;
-	for (i = 1; i <= 6; i++)
+	int j;
+	char c;
+	c = 97;
+	for(i = 0; i < 10; i++)
 	{
-		if (i % 2)
-		{
-			continue;
+		for(j = 0; j < 10;)
+		{        
+			if(j>i) 
+			{
+				write(10 * i + j);
+			}
+			else
+			{
+				write(j);
+			}
+			j++;
 		}
-		ans = ans + i;
-	}
-	write ans;
-	
-	ans = 0;
-	for (i = 1; i <= 10; i++)
-	{
-		if (i % 2)
-		{
-			break;
-		}
-		ans = ans + i;
-	}
-	write ans;
-	
-	for (i = 1; i <= 10; i++)
-	{
-		write i;
-		if (i % 2)
-		{
-			exit(0);
-		}
-	}
+    }   
+	write(c);
 }$
