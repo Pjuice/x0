@@ -29,7 +29,7 @@ void simple_var(int *ptr_offset, int *ptr_kind)
 			while (sym == lmbrace)
 			{
 				getsym();
-				if (sym == ident)
+				if (sym == intnum)
 				{
 					int tepNum = intNum;
 					getsym();

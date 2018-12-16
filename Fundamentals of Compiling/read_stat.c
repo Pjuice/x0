@@ -5,7 +5,9 @@ void read_stat()
 	if (sym == readsym)
 	{
 		getsym();
-		void variable(enum object*ptr_kind, int *ptr_offset);
+		enum object kind;
+		int offset;
+		variable(&kind, &offset);
 		if (sym == semicolon)
 		{
 			getsym();

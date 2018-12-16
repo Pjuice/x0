@@ -1,24 +1,15 @@
 main()
 {
-	int i;
-	int j;
 	char c;
+	int x;
+	int y;
+	int m;
+	read x;
+	read y;
+	m = (x * x + y * y) / 2;
 	c = 97;
-	for(i = 0; i < 10; i++)
-	{
-		for(j = 0; j < 10;)
-		{        
-			if(j>i) 
-			{
-				write(10 * i + j);
-			}
-			else
-			{
-				write(j);
-			}
-			j++;
-		}
-    }   
-	write(c);
+	write m;
+	write c;
+	write (c + 1);
 }$
 ===Parsing success!===
