@@ -2,10 +2,14 @@
 
 void factor()
 {
+	int flag = 0;
+
 	if (sym == not)
 	{
+		flag = 1;
 		getsym();
 	}
+
 	if (sym == lparen)
 	{
 		getsym();
@@ -27,10 +31,32 @@ void factor()
 	}
 	else if (sym == intnum || sym == truesym || sym == falsesym || sym == doublenum)
 	{
+		if (sym == intnum)
+		{
+			gen(lit, intNum, 0);
+		}
+		else if (sym == doublenum)
+		{
+			gen(lit, 0, doublenumber);
+		}
+		else if (sym == truesym)
+		{
+			gen(lit, 1, 0);
+		}
+		else if (sym == falsesym)
+		{
+			gen(lit, 0, 0);
+		}
 		getsym();
 	}
 	else
 	{
 		error(16);	//缺少有效标识符
+	}
+
+
+	if (flag == 1)
+	{
+		gen(opr, 18, 0);
 	}
 }

@@ -164,6 +164,7 @@
     <ClCompile Include="expression_stat.c" />
     <ClCompile Include="factor.c" />
     <ClCompile Include="for_stat.c" />
+    <ClCompile Include="gen.c" />
     <ClCompile Include="head.c" />
     <ClCompile Include="if_stat.c" />
     <ClCompile Include="init.c" />

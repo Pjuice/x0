@@ -21,6 +21,9 @@
 #define symnum 65		//符号的个数
 #define maxdimension 10	//最大维度
 #define maxfunction 100 //最大的函数数目
+#define maxcode		1000	//中间代码的最大数
+#define maxcodelen	5	//中间代码操作符的最大长度
+
 
 enum symbol
 {
@@ -58,11 +61,11 @@ enum fct
 };
 
 /* 虚拟机代码结构 */
-struct instruction
+struct codeins
 {
 	enum fct f; /* 虚拟机代码指令 */
-	int l;      /* 引用层与声明层的层次差 */
-	int a;      /* 根据f的不同而不同 */
+	int opr1;      
+	double opr2;      
 };
 
 extern char ch;					/* 存放当前读取的字符，getch 使用 */
@@ -86,6 +89,7 @@ extern bool statbegsys[symnum];     /* 表示语句开始的符号集合 */
 extern bool facbegsys[symnum];      /* 表示因子开始的符号集合 */
 extern struct functioninfo fctinfo[maxfunction];	/*存放每个函数的信息*/
 extern int fctnum;		//函数的数目
+extern int codenum;		
 
 struct tablestruct
 {
@@ -107,11 +111,11 @@ struct tablestruct
 struct functioninfo
 {
 	char name[al + 1];
-	struct tablestruct symtable[txmax];  /* symbol table of the function */
-	int tablesize;                         /* size of the symbol table */
-	int paranum;		                   /* number of parameters */
-	int startintcode;		               /* position where the function starts in intermediate code */
-	enum rettype returntype;                       /* type of return value */
+	struct tablestruct symtable[txmax];  /* 该函数的符号表 */
+	int tablesize;                         /* 符号表的大小 */
+	int paranum;		                   /* 参数的个数 */
+	int startintcode;		               /* 该函数在code表中的起始位置 */
+	enum rettype returntype;                       /* 返回值的类型 */
 };
 
  struct backup
@@ -127,7 +131,7 @@ struct functioninfo
 };
 
 extern struct tablestruct table[txmax];
-
+extern struct codeins code[maxcode];
 extern FILE* fin;
 extern FILE* foutput;
 extern char fname[al];
@@ -166,6 +170,7 @@ void value_expr();
 void variable(enum object*ptr_kind, int *ptr_offset);
 void backup();
 void rollback();
+void gen(enum fct f, int opr1, double opr2);
 
 void enter(enum object k, int offset, int* size, int d, double value);
 int positionbyidentname(char* identname, int pos);

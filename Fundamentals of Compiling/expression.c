@@ -19,6 +19,7 @@ void expression()
 				}
 				getsym();
 				expression();
+				gen(sto, offset, fctnum - 1);
 			}
 			else
 			{

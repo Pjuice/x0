@@ -8,8 +8,22 @@ void value_expr()
 		simple_value();
 		while (sym == andsym || sym == orsym || sym == xor)
 		{
+			enum symbol tempsym = sym;
 			getsym();
 			simple_value();
+
+			if (tempsym == andsym)
+			{
+				gen(opr, 16, 0);
+			}
+			else if (tempsym == orsym)
+			{
+				gen(opr, 17, 0);
+			}
+			else if (tempsym == xor)
+			{
+				gen(opr, 18, 0);
+			}
 		}
 	}
 	else

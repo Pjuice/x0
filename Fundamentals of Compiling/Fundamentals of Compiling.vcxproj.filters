@@ -137,5 +137,8 @@
     <ClCompile Include="backup.c">
       <Filter>源文件\gramma</Filter>
     </ClCompile>
+    <ClCompile Include="gen.c">
+      <Filter>源文件\gramma</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

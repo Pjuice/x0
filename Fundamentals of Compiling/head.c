@@ -13,6 +13,8 @@ enum symbol wsym[norw];	/* 保留字对应的符号值 */
 enum symbol ssym[256];	/* 单字符的符号值 */
 int backupnum = 0;
 struct backup backupsave[maxbackup];
+int codenum;			/*code的条数*/
+
 
 int cx;				/*虚拟机代码指针，取值范围[0, cxmax-1]*/
 char memonic[fctcodenum][5];	/*虚拟机代码指令名称*/
@@ -22,6 +24,7 @@ bool facbegsys[symnum];     /* 表示因子开始的符号集合 */
 struct functioninfo fctinfo[maxfunction];	/*存放每个函数的信息*/
 int fctnum;		//函数的数目
 struct tablestruct table[txmax];
+struct codeins code[maxcode];
 
 FILE* fin;
 FILE* foutput;

@@ -8,8 +8,21 @@ void term()
 		factor();
 		while (sym == times || sym == slash || sym == modsym)
 		{
+			enum symbol tempsym = sym;
 			getsym();
 			factor();
+			if (tempsym == times)
+			{
+				gen(opr, 4, 0);
+			}
+			else if (tempsym == slash)
+			{
+				gen(opr, 5, 0);
+			}
+			else if (tempsym == modsym)
+			{
+				gen(opr, 6, 0);
+			}
 		}
 	}
 	else
