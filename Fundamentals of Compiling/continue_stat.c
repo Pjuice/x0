@@ -9,6 +9,9 @@ void continue_stat()
 		{
 			getsym();
 			gen(jmp, 0, 0);
+
+			ctnlist[ctnnum] = codenum - 1;
+			ctnnum = ctnnum + 1;
 		}
 		else
 		{

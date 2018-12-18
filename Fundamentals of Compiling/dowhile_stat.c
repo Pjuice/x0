@@ -2,13 +2,24 @@
 
 void dowhile_stat()
 {
+	int tempbrknum = brknum;
+	int tempctnnum = ctnnum;
+
 	if (sym == dosym)
 	{
 		getsym();
 		if (sym == lbrace)
 		{
 			getsym();
+			int tempos = codenum;
 			statement_list();
+
+			for (int i = tempctnnum; i < ctnnum; i++)
+			{
+				code[ctnlist[i]].opr1 = codenum;
+			}
+			ctnnum = tempctnnum;
+
 			if (sym == rbrace)
 			{
 				getsym();
@@ -19,6 +30,8 @@ void dowhile_stat()
 					{
 						getsym();
 						expression();
+						gen(jpc, codenum + 2, 0);
+						gen(jmp, tempos, 0);
 						if (sym == rparen)
 						{
 							getsym();
@@ -60,4 +73,11 @@ void dowhile_stat()
 	{
 		error(26);	//È±ÉÙdo×Ö·û
 	}
+
+	for (int i = tempbrknum; i < brknum; i++)
+	{
+		code[brklist[i]].opr1 = codenum;
+	}
+	brknum = tempbrknum;
+
 }

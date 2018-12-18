@@ -2,13 +2,23 @@
 
 void repeat_stat()
 {
+	int tempbrknum = brknum;
+	int tempctnnum = ctnnum;
+
 	if (sym == repeatsym)
 	{
 		getsym();
 		if (sym == lbrace)
 		{
 			getsym();
+			int pos = codenum;
 			statement_list();
+
+			for (int i = tempctnnum; i < ctnnum; i++)
+			{
+				code[ctnlist[i]].opr1 = codenum;
+			}
+			ctnnum = tempctnnum;
 			if (sym == rbrace)
 			{
 				getsym();
@@ -19,6 +29,8 @@ void repeat_stat()
 					{
 						getsym();
 						expression();
+						gen(jpc, pos, 0);
+
 						if (sym == rparen)
 						{
 							getsym();
@@ -60,4 +72,10 @@ void repeat_stat()
 	{
 		error(31);	//È±ÉÙrepeat·ûºÅ
 	}
+
+	for (int i = tempbrknum; i < brknum; i++)
+	{
+		code[brklist[i]].opr1 = codenum;
+	}
+	brknum = tempbrknum;
 }
