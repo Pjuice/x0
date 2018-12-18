@@ -8,6 +8,7 @@ void continue_stat()
 		if (sym == semicolon)
 		{
 			getsym();
+			gen(jmp, 0, 0);
 		}
 		else
 		{

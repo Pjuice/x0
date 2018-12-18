@@ -23,6 +23,8 @@
 #define maxfunction 100 //最大的函数数目
 #define maxcode		1000	//中间代码的最大数
 #define maxcodelen	5	//中间代码操作符的最大长度
+#define maxctn 1000
+#define maxbrk 1000
 
 
 enum symbol
@@ -107,6 +109,11 @@ struct tablestruct
 	retvoid, retint, retdouble, retchar, retbool
 };
 
+ enum datatype
+ {
+	 Nul, Int, Double, Char, Bool
+ };
+
  /*存储函数的信息*/
 struct functioninfo
 {
@@ -176,4 +183,9 @@ void enter(enum object k, int offset, int* size, int d, double value);
 int positionbyidentname(char* identname, int pos);
 int positionbyoffset(int offset, int pos);
 int positionbyfctname(char* fctname);
+
+extern int ctnnum;
+extern int brknum;
+extern int ctnlist[maxctn];
+extern int brklist[maxbrk];
 

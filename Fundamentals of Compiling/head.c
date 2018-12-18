@@ -29,3 +29,9 @@ struct codeins code[maxcode];
 FILE* fin;
 FILE* foutput;
 char fname[al];
+
+int ctnnum;
+int brknum;
+int ctnlist[maxctn];
+int brklist[maxbrk];
+

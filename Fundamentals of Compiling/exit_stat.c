@@ -11,12 +11,14 @@ void exit_stat()
 			if (sym == intnum)
 			{
 				getsym();
+				gen(lit, intnum, 0);
 				if (sym == rparen)
 				{
 					getsym();
 					if (sym == semicolon)
 					{
 						getsym();
+						gen(opr, 7, 0);	//执行c语言中的exit函数
 					}
 					else
 					{

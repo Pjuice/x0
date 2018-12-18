@@ -14,6 +14,7 @@ void write_stat()
 		{
 			error(12);	//缺少结束符分号
 		}
+		gen(opr, 15, 0);	//输出栈顶元素
 	}
 	else
 	{

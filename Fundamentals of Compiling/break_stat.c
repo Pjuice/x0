@@ -8,6 +8,9 @@ void break_stat()
 		if (sym == semicolon)
 		{
 			getsym();
+			gen(jmp, 0, 0);
+			brklist[brknum] = codenum - 1;
+			brknum = brknum + 1;
 		}
 		else
 		{
