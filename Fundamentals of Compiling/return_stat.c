@@ -10,9 +10,11 @@ void return_stat()
 		{
 			value_expr();
 		}
+
 		if (sym == semicolon)
 		{
 			getsym();
+			gen(opr, 0, fctnum - 1);
 		}
 		else
 		{

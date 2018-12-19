@@ -110,4 +110,9 @@ void switch_stat()
 	{
 		error(31);	//»±…Ÿswitch
 	}
+	for (int i = tempbrknum; i < brknum; i++)
+	{
+		code[brklist[i]].opr1 = codenum;
+	}
+	brknum = tempbrknum;
 }
