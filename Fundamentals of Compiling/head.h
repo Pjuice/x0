@@ -14,17 +14,16 @@
 #define maxbackup 100	//备份的最大个数
 #define maxerr 30		//允许的最多错误数
 #define amax 2048		//地址上界
-#define levmax 3		//最大允许过程嵌套声明层数
 #define	cxmax 200		//最多的虚拟机代码数
-#define stacksize 500	//运行时数据栈元素最多为500个
+#define maxstacksize 500	//运行时数据栈元素最多为500个
 #define fctcodenum 11	//虚拟机代码指令个数
 #define symnum 65		//符号的个数
 #define maxdimension 10	//最大维度
 #define maxfunction 100 //最大的函数数目
 #define maxcode		1000	//中间代码的最大数
 #define maxcodelen	5	//中间代码操作符的最大长度
-#define maxctn 1000
-#define maxbrk 1000
+#define maxctn 1000		//continue数组的最大长度
+#define maxbrk 1000		//break数组的最大长度
 
 
 enum symbol
@@ -168,7 +167,6 @@ void exit_stat();
 void factor();
 void for_stat();
 void repeat_stat();
-void return_stat();
 void simple_value();
 void simple_var(int *ptr_offset, enum  object*ptr_kind);
 void switch_stat();
@@ -180,7 +178,7 @@ void rollback();
 void gen(enum fct f, int opr1, double opr2);
 
 void enter(enum object k, int offset, int* size, int d, double value);
-int positionbyidentname(char* identname, int pos);
+int position(char* identname, int pos);
 int positionbyoffset(int offset, int pos);
 int positionbyfctname(char* fctname);
 

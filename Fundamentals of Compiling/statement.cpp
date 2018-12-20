@@ -55,10 +55,6 @@ void statement()
 	{
 		repeat_stat();
 	}
-	else if (sym == returnsym)
-	{
-		return_stat();
-	}
 	else
 	{
 		error(20);	//缺少有效标识符

@@ -1,4 +1,5 @@
 #include "head.h"
+#include "stackobject.h"
 
 void interpret()
 {
@@ -6,5 +7,7 @@ void interpret()
 	int b = 1; /* 指令基址 */
 	int t = 0; /* 栈顶指针 */
 	struct codeins ins; /*当前指令*/
+	stackobject s[maxstacksize];
+
 	
 }

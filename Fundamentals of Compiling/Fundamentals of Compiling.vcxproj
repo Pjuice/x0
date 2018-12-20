@@ -176,7 +176,6 @@
     <ClCompile Include="position.cpp" />
     <ClCompile Include="read_stat.cpp" />
     <ClCompile Include="repeat_stat.cpp" />
-    <ClCompile Include="return_stat.cpp" />
     <ClCompile Include="rollback.cpp" />
     <ClCompile Include="simple_value.cpp" />
     <ClCompile Include="simple_var.cpp" />

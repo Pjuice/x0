@@ -4,7 +4,7 @@ void simple_var(int *ptr_offset, enum  object*ptr_kind)
 {
 	if (sym == ident)
 	{
-		int pos = positionbyidentname(id, fctnum - 1);
+		int pos = position(id, fctnum - 1);
 
 		if (pos == -1)
 		{

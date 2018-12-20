@@ -23,7 +23,7 @@ void factor()
 			error(16);	//»±…Ÿ”“–°¿®∫≈
 		}
 	}
-	else if (sym == incre || sym == decre || (sym == ident && positionbyidentname(id, fctnum - 1) != -1))
+	else if (sym == incre || sym == decre || (sym == ident && position(id, fctnum - 1) != -1))
 	{
 		int offset;
 		enum object kind;

@@ -4,7 +4,7 @@ void expression()
 {
 	if (sym == ident)
 	{
-		if (positionbyidentname(id, fctnum - 1) != -1)
+		if (position(id, fctnum - 1) != -1)
 		{
 			backup();
 			int offset;

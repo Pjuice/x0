@@ -8,7 +8,7 @@
 * 该ident在这个函数的symbol表的位置
 */
 
-int positionbyidentname(char* identname, int pos)
+int position(char* identname, int pos)
 {
 	for (int i = 0; i < fctinfo[pos].tablesize; i++)
 	{
@@ -27,7 +27,7 @@ int positionbyidentname(char* identname, int pos)
 * 输出:
 * 这个ident在函数的sym表中的位置
 */
-int positionbyoffset(int offset, int pos)
+int position(int offset, int pos)
 {
 	for (int i = 0; i < fctinfo[pos].tablesize; i++)
 	{
@@ -43,7 +43,7 @@ int positionbyoffset(int offset, int pos)
 * 输入: 函数名
 * 输出: 在facinfo中函数的位置
 */
-int positionbyfctname(char* fctname)
+int positon(char* fctname)
 {
 	for (int i = 0; i < fctnum; i++)
 	{

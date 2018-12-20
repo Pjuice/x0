@@ -101,9 +101,6 @@
     <ClCompile Include="head.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="return_stat.cpp">
-      <Filter>源文件\gramma</Filter>
-    </ClCompile>
     <ClCompile Include="rollback.cpp">
       <Filter>源文件\gramma</Filter>
     </ClCompile>

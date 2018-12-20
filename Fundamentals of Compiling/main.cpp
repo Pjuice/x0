@@ -39,7 +39,7 @@ int main()
 
 	fctnum++;
 	strcpy(fctinfo[fctnum-1].name, id);
-	//fctinfo[fctnum].startINTCode = codeNum;
+	fctinfo[fctnum].startintcode = codenum;
 	fctinfo[fctnum].paranum = 0;
 	fctinfo[fctnum].returntype = retvoid;
 
