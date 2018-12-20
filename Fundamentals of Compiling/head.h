@@ -40,8 +40,8 @@ enum symbol
 	charsym, elsesym, intnum,sharpsym,andsym,
 	orsym, intsym, doublesym, boolsym, truesym, 
 	falsesym, switchsym, forsym, defaultsym, doublenum,
-	repeatsym, returnsym, exitsym, continuesym, not,
-	incre, decre,xor,modsym, oversym
+	repeatsym, returnsym, exitsym, continuesym, notsym,
+	incre, decre,xorsym,modsym, oversym
 };
 
 /* 符号表中的类型 */
@@ -170,7 +170,7 @@ void for_stat();
 void repeat_stat();
 void return_stat();
 void simple_value();
-void simple_var(int *ptr_offset, int *ptr_kind);
+void simple_var(int *ptr_offset, enum  object*ptr_kind);
 void switch_stat();
 void term();
 void value_expr();
@@ -189,3 +189,4 @@ extern int brknum;
 extern int ctnlist[maxctn];
 extern int brklist[maxbrk];
 
+extern char fctcodestring[fctcodenum][maxcodelen];

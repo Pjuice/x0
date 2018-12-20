@@ -155,7 +155,7 @@ void getsym()
 					}
 					else
 					{
-						sym = not;
+						sym = notsym;
 					}
 				}
 				else

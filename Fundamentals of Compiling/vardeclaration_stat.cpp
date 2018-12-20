@@ -4,7 +4,7 @@ void vardeclaration_stat(int *ptr_offset)
 {
 	if (sym == intsym || sym == charsym || sym == doublesym || sym == boolsym)
 	{
-		enum object type = sym;
+		enum symbol type = sym;
 		getsym();
 		if (sym == ident)
 		{

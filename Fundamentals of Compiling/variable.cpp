@@ -2,7 +2,7 @@
 
 void variable(enum object*ptr_kind, int *ptr_offset)
 {
-	int cretype = 0;
+	int cretype = 5;
 
 	if (sym == incre || sym == decre)
 	{
@@ -77,7 +77,7 @@ void variable(enum object*ptr_kind, int *ptr_offset)
 		gen(lod, *ptr_offset, fctnum - 1);
 		break;
 	case 5:
-		GenINTCode(lod, *ptr_offset, fctnum - 1);
+		gen(lod, *ptr_offset, fctnum - 1);
 		break;
 	}
 }

@@ -90,6 +90,12 @@ int main()
 	printf("\n===Parsing success!===\n");
 	fprintf(foutput, "\n===Parsing success!===\n");
 
+	for (int i = 0; i < codenum; i++)
+	{
+		fprintf(foutput, "[%d] %s %d %.2f\n", i, fctcodestring[code[i].f], code[i].opr1, code[i].opr2);
+	}
+
 	fclose(foutput);
 	fclose(fin);
+
 }

@@ -35,3 +35,5 @@ int brknum;
 int ctnlist[maxctn];
 int brklist[maxbrk];
 
+char fctcodestring[fctcodenum][maxcodelen] = { "lit", "opr", "lod", "sto", "cal",
+"ini", "jmp", "jpc", "add", "sub", "tad" };

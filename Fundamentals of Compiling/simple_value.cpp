@@ -8,7 +8,7 @@ void simple_value()
 		addict_expr();
 		gen(opr, 20, 0);
 	}
-	else if (sym == minus || sym == not || sym == lparen || sym == incre || sym == decre || sym == ident
+	else if (sym == minus || sym == notsym || sym == lparen || sym == incre || sym == decre || sym == ident
 		|| sym == truesym || sym == falsesym || sym == intnum || sym == doublenum)
 	{
 		addict_expr();

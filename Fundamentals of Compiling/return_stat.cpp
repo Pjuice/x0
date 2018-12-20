@@ -5,7 +5,7 @@ void return_stat()
 	if (sym == returnsym)
 	{
 		getsym();
-		if (sym == minus || sym == not || sym == lparen || sym == incre || sym == decre || sym == ident
+		if (sym == minus || sym == notsym || sym == lparen || sym == incre || sym == decre || sym == ident
 			|| sym == truesym || sym == falsesym || sym == intnum || sym == doublenum || sym == oddsym)
 		{
 			value_expr();

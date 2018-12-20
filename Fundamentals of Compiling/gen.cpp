@@ -4,7 +4,7 @@ void gen(enum fct f, int opr1, double opr2)
 {
 	if (codenum >= maxcode) 
 	{
-		ErrorHandler(26);	//当前code的数目过多
+		error(26);	//当前code的数目过多
 	}
 	
 	code[codenum].f = f;

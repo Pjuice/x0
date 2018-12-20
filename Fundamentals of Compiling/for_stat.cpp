@@ -11,7 +11,7 @@ void for_stat()
 		if (sym == lparen)
 		{
 			getsym();
-			if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+			if (sym == oddsym || sym == minus || sym == notsym || sym == lparen || sym == incre
 				|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
 			{
 				expression();
@@ -23,7 +23,7 @@ void for_stat()
 				int tempos1;
 				int isempty = 1;
 				
-				if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+				if (sym == oddsym || sym == minus || sym == notsym || sym == lparen || sym == incre
 					|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
 				{
 					expression();
@@ -43,7 +43,7 @@ void for_stat()
 					getsym();
 					int tempcodenum1 = codenum;
 
-					if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+					if (sym == oddsym || sym == minus || sym == notsym || sym == lparen || sym == incre
 						|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
 					{
 						expression();

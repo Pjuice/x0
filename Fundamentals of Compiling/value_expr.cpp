@@ -2,11 +2,11 @@
 
 void value_expr()
 {
-	if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+	if (sym == oddsym || sym == minus || sym == notsym || sym == lparen || sym == incre
 		|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym || sym == ident)
 	{
 		simple_value();
-		while (sym == andsym || sym == orsym || sym == xor)
+		while (sym == andsym || sym == orsym || sym == xorsym)
 		{
 			enum symbol tempsym = sym;
 			getsym();
@@ -20,7 +20,7 @@ void value_expr()
 			{
 				gen(opr, 17, 0);
 			}
-			else if (tempsym == xor)
+			else if (tempsym == xorsym)
 			{
 				gen(opr, 18, 0);
 			}

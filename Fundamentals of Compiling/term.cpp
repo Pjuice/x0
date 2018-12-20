@@ -2,7 +2,7 @@
 
 void term()
 {
-	if (sym == not || sym == lparen || sym == incre || sym == decre || sym == ident || sym == intnum || sym == doublenum
+	if (sym == notsym || sym == lparen || sym == incre || sym == decre || sym == ident || sym == intnum || sym == doublenum
 		|| sym == truesym || sym == falsesym)
 	{
 		factor();

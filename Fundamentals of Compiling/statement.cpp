@@ -22,7 +22,7 @@ void statement()
 	{
 		compound_stat();
 	}
-	else if (sym == semicolon || sym == oddsym || sym == minus || sym == not || sym == lparen || sym == ident
+	else if (sym == semicolon || sym == oddsym || sym == minus || sym == notsym || sym == lparen || sym == ident
 		|| sym == incre || sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym)
 	{
 		expression_stat();

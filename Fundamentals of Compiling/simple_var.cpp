@@ -1,6 +1,6 @@
 #include "head.h"
 
-void simple_var(int *ptr_offset, int *ptr_kind)
+void simple_var(int *ptr_offset, enum  object*ptr_kind)
 {
 	if (sym == ident)
 	{

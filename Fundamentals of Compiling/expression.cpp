@@ -28,7 +28,7 @@ void expression()
 			}
 		}
 	}
-	else if (sym == oddsym || sym == minus || sym == not || sym == lparen || sym == incre
+	else if (sym == oddsym || sym == minus || sym == notsym || sym == lparen || sym == incre
 		|| sym == decre || sym == intnum || sym == doublenum || sym == truesym || sym == falsesym)
 	{
 		value_expr();

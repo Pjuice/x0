@@ -4,7 +4,7 @@ void factor()
 {
 	int flag = 0;
 
-	if (sym == not)
+	if (sym == notsym)
 	{
 		flag = 1;
 		getsym();
