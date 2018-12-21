@@ -30,6 +30,9 @@ int main()
 	cc = ll = 0;
 	ch = ' ';
 
+	gen(jmp, 1, 0);
+
+
 	getsym();
 
 	if (sym != mainsym)
@@ -39,9 +42,9 @@ int main()
 
 	fctnum++;
 	strcpy(fctinfo[fctnum-1].name, id);
-	fctinfo[fctnum].startintcode = codenum;
-	fctinfo[fctnum].paranum = 0;
-	fctinfo[fctnum].returntype = retvoid;
+	fctinfo[fctnum-1].startintcode = codenum;
+	fctinfo[fctnum-1].paranum = 0;
+	fctinfo[fctnum-1].returntype = retvoid;
 
 	getsym();
 
@@ -72,6 +75,8 @@ int main()
 
 	vardeclaration_list(&offset);
 
+	gen(ini, fctnum - 1, 0);
+
 	statement_list();
 	
 
@@ -87,6 +92,8 @@ int main()
 		error(10);	//È±ÉÙ³ÌÐò½áÊø·û
 	}
 
+	gen(opr, 0, fctnum - 1);
+
 	printf("\n===Parsing success!===\n");
 	fprintf(foutput, "\n===Parsing success!===\n");
 
@@ -97,5 +104,9 @@ int main()
 
 	fclose(foutput);
 	fclose(fin);
+
+	interpret();
+
+	return 0;
 
 }

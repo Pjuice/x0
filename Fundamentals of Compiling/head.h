@@ -176,11 +176,13 @@ void variable(enum object*ptr_kind, int *ptr_offset);
 void backup();
 void rollback();
 void gen(enum fct f, int opr1, double opr2);
+void interpret();
 
 void enter(enum object k, int offset, int* size, int d, double value);
+
 int position(char* identname, int pos);
-int positionbyoffset(int offset, int pos);
-int positionbyfctname(char* fctname);
+int position(int offset, int pos);
+
 
 extern int ctnnum;
 extern int brknum;

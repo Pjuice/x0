@@ -22,7 +22,7 @@ bool declbegsys[symnum];    /* 表示声明开始的符号集合 */
 bool statbegsys[symnum];    /* 表示语句开始的符号集合 */
 bool facbegsys[symnum];     /* 表示因子开始的符号集合 */
 struct functioninfo fctinfo[maxfunction];	/*存放每个函数的信息*/
-int fctnum;		//函数的数目
+int fctnum = 0;		//函数的数目
 struct tablestruct table[txmax];
 struct codeins code[maxcode];
 

@@ -39,18 +39,3 @@ int position(int offset, int pos)
 	return -1;
 }
 
-/*
-* 输入: 函数名
-* 输出: 在facinfo中函数的位置
-*/
-int positon(char* fctname)
-{
-	for (int i = 0; i < fctnum; i++)
-	{
-		if (strcmp(fctinfo[i].name, fctname) == 0)
-		{
-			return i;
-		}
-	}
-	return -1;
-}
