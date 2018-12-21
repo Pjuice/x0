@@ -1,21 +1,14 @@
 main()
 {
+	char c;
 	int x;
 	int y;
-	int m[3];
+	int m;
 	read x;
 	read y;
-	if(x > y) 
-	{
-		m[0] = x - y;
-	}
-	else 
-	{
-		m[0] = y - x;
-	}
-	m[1] = x + y;
-	m[2] = x * y;
-	write m[0];
-	write m[1];
-	write m[2];
+	m = (x * x + y * y) / 2;
+	c = 97;
+	write m;
+	write c;
+	write (c + 1);
 }$

@@ -133,7 +133,9 @@ struct functioninfo
 	int backupll;
 	char backupline[81];
 	char backupid[al + 1];
-
+	int backupcode;
+	double backupdoublenum;           
+	int backupintnum;
 };
 
 extern struct tablestruct table[txmax];

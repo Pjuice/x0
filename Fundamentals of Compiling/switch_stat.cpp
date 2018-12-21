@@ -30,7 +30,7 @@ void switch_stat()
 							getsym();
 							if (sym == intnum)
 							{
-								gen(lit, intnum, 0);
+								gen(lit, intNum, 0);
 								gen(opr, 21, 0); 
 								gen(jpc, 0, 0);
 								tempos1 = codenum - 1;

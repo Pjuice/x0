@@ -11,6 +11,9 @@ void backup()
 	backupsave[backupnum].backupcc = cc;
 	backupsave[backupnum].backupll = ll;
 	strcpy(backupsave[backupnum].backupid, id);
+	backupsave[backupnum].backupcode = codenum;
+	backupsave[backupnum].backupdoublenum = doublenumber;
+	backupsave[backupnum].backupintnum = intNum;
 
 	for (int i = 0; i < 81; i++)
 	{

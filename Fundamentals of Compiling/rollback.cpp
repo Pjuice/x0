@@ -9,6 +9,9 @@ void rollback()
 	sym = backupsave[backupnum].backupsym;
 	cc = backupsave[backupnum].backupcc;
 	ll = backupsave[backupnum].backupll;
+	doublenumber = backupsave[backupnum].backupdoublenum;
+	intNum = backupsave[backupnum].backupintnum;
+	codenum = backupsave[backupnum].backupcode;
 
 	strcpy(id, backupsave[backupnum].backupid);
 
