@@ -9,7 +9,7 @@
 
 #define norw 26			//保留字的个数
 #define txmax 100		//符号表容量
-#define al 10			//标识符的最大长度
+#define al 20			//标识符的最大长度
 #define nmax 14			//数字的最大位数
 #define maxbackup 100	//备份的最大个数
 #define maxerr 30		//允许的最多错误数
@@ -94,7 +94,7 @@ extern int codenum;
 
 struct tablestruct
 {
-	char name[al];
+	char name[al+1];
 	enum object kind;
 	int offset;
 	int size[maxdimension];

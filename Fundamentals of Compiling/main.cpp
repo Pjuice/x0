@@ -2,9 +2,9 @@
 
 int main()
 {
-	printf("Input x0 file?    ");
-	scanf("%s", fname);
+	//strcpy(fname, "./data/input.txt");
 	
+	scanf("%s", fname);
 	if ((fin = fopen(fname, "r")) == NULL)
 	{
 		printf("Can't open the input file!\n");
@@ -106,6 +106,14 @@ int main()
 	fclose(fin);
 
 	interpret();
+
+	FILE* fout = fopen ("./data/code.bin", "wb");
+	fwrite (code, sizeof (code[0]), codenum, fout);
+	fclose (fout);
+
+	fout = fopen ("./data/fctInfo.bin", "wb");
+	fwrite (fctinfo, sizeof (fctinfo[0]), fctnum, fout);
+	fclose (fout);
 
 	return 0;
 
