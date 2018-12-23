@@ -22,7 +22,7 @@ void value_expr()
 			}
 			else if (tempsym == xorsym)
 			{
-				gen(opr, 18, 0);
+				gen(opr, 19, 0);
 			}
 		}
 	}

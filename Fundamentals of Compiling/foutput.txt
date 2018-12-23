@@ -1,44 +1,37 @@
 main()
 {
-	char c;
-	int x;
-	int y;
-	int m;
-	read x;
-	read y;
-	m = (x * x + y * y) / 2;
-	c = 97;
-	write m;
-	write c;
-	write (c + 1);
+	bool a;
+	bool b;
+	bool c;
+	a = b = 1;
+	c = 0;
+	write a && b;
+	write a && c;
+	write a || c;
+	write a xor c;
 }$
 ===Parsing success!===
 [0] jmp 1 0.00
 [1] ini 0 0.00
-[2] lod 4 0.00
-[3] opr 14 1.00
-[4] sto 4 0.00
-[5] lod 5 0.00
-[6] opr 14 1.00
-[7] sto 5 0.00
+[2] lit 1 0.00
+[3] sto 4 0.00
+[4] sto 3 0.00
+[5] lit 0 0.00
+[6] sto 5 0.00
+[7] lod 3 0.00
 [8] lod 4 0.00
-[9] lod 4 0.00
-[10] opr 4 0.00
-[11] lod 5 0.00
+[9] opr 16 0.00
+[10] opr 15 0.00
+[11] lod 3 0.00
 [12] lod 5 0.00
-[13] opr 4 0.00
-[14] opr 2 0.00
-[15] lit 2 0.00
-[16] opr 5 0.00
-[17] sto 6 0.00
-[18] lit 97 0.00
-[19] sto 3 0.00
-[20] lod 6 0.00
-[21] opr 15 0.00
-[22] lod 3 0.00
-[23] opr 15 0.00
-[24] lod 3 0.00
-[25] lit 1 0.00
-[26] opr 2 0.00
-[27] opr 15 0.00
-[28] opr 0 0.00
+[13] opr 16 0.00
+[14] opr 15 0.00
+[15] lod 3 0.00
+[16] lod 5 0.00
+[17] opr 17 0.00
+[18] opr 15 0.00
+[19] lod 3 0.00
+[20] lod 5 0.00
+[21] opr 19 0.00
+[22] opr 15 0.00
+[23] opr 0 0.00

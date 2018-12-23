@@ -160,7 +160,7 @@ void interpret()
 					break;
 
 				case 18:
-					s[t] = s[!t];
+					s[t] = !s[t];
 					break;
 				
 				case 19:
